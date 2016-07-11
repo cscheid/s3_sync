@@ -21,6 +21,10 @@ It will:
 * remove things that are not on the local directory but are on the S3
   bucket
 * not touch anything else
+* and, OH YEAH. It will set mime types via a combination of extension
+  lookup and libmagic. Which *neither* of `awscli` or `s3cmd` will do,
+  even though it's what you want to do in 99% of the cases, because
+  that's what Apache does. Apache is sensible. Let's be sensible.
 
 Beware: written in angry. I had work to do this morning, damn it.
 
